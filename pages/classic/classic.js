@@ -1,6 +1,8 @@
-import ClassicModel from '../../models/ClassicModel'
+import ClassicModel from '../../models/classic'
+import LikeModel from '../../models/like'
 
 const classicModel = new ClassicModel()
+const likeModel = new LikeModel()
 
 Page({
 
@@ -8,6 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    classic: null
   },
 
   /**
@@ -19,6 +22,11 @@ Page({
         classic: data
       })
     })
+  },
+
+  onLike(event) {
+    let {id, type} = this.data.classic
+    likeModel.like(id, type, event.detail.like)
   },
 
   /**

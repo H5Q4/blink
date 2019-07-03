@@ -34,6 +34,8 @@ Component({
         count,
         like: !like
       })
+
+      this.triggerEvent('like', { like: !like })
     }
   }
 })

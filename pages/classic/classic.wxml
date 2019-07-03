@@ -1,3 +1,4 @@
 <view class="container">
-  <cmp-like like="{{classic.like_status}}" count="{{classic.fav_nums}}"></cmp-like>
+  <cmp-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}"></cmp-like>
+  <cmp-movie cover="{{classic.image}}" content="{{classic.content}}"></cmp-movie>
 </view>

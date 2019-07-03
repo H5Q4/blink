@@ -1,8 +1,7 @@
 /* pages/classic/classic.wxss */
 .container {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: column;
 }
 .chunk {
   width: 100px;
