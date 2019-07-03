@@ -1,7 +1,6 @@
-// pages/classic/classic.js
-import HTTPClient from '../../utils/http_client'
+import ClassicModel from '../../models/ClassicModel'
 
-const httpClient = new HTTPClient()
+const classicModel = new ClassicModel()
 
 Page({
 
@@ -9,25 +8,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    test: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.request({
-    //   url: 'http://bl.7yue.pro/v1/classic/latest',
-    //   header: {
-    //     appkey: 'RdshydjBvcYZhMZC'
-    //   },
-    //   success: (res) => {
-    //     console.log(this.data)
-    //   }
-    // })
-    httpClient.request({
-      url: '/classic/latest',
-      success: data => console.log(data)
+    classicModel.getLatest(data => {
+      this.setData({
+        classic: data
+      })
     })
   },
 

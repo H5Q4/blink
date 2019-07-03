@@ -1,4 +1,3 @@
-<!-- pages/classic/classic.wxml -->
 <view class="container">
-  <cmp-like></cmp-like>
+  <cmp-like like="{{classic.like_status}}" count="{{classic.fav_nums}}"></cmp-like>
 </view>
