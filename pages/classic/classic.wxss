@@ -1,0 +1,22 @@
+/* pages/classic/classic.wxss */
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.chunk {
+  width: 100px;
+  height: 100px;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+.blue {
+  background-color: blue;
+}
